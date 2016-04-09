@@ -10,15 +10,10 @@ import org.apache.hadoop.mapreduce.Mapper;
 public class Map extends Mapper<LongWritable, Text, Employee, Text>{
 	
 	String [] row;
-	String x="just";
 	Text value =new Text();  ;
 	protected void map(LongWritable offSet, Text line, Context context) throws IOException, InterruptedException {
 		row=line.toString().split("~");
-		System.out.println("xxx");
-		System.out.println(line.toString());
-		System.out.println(row[0].toString());
-		//value.set(row[4].toString() + "\t"+ row[5].toString() + "\t" + row[6].toString());	
-		value.set(x);
+		value.set(row[4].toString() + "\t"+ row[5].toString() + "\t" + row[6].toString());
 		context.write(new Employee(row[0].toString(),	(row[1].toString() + "\t"+ row[2].toString() + "\t" + row[3].toString())),value);
 		//value.set(row[1] + "\t"+ row[2] + "\t" + row[3]);
 		//context.write(new Employee(row[0],	(row[1] + "\t"+ row[2] + "\t" + row[3])),value);
