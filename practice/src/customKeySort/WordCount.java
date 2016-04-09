@@ -1,4 +1,4 @@
-package customPartitioner;
+package customKeySort;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
@@ -24,8 +24,7 @@ public class WordCount {
 		job.setOutputKeyClass(Text.class);
 		job.setOutputValueClass(IntWritable.class);
 		
-		job.setNumReduceTasks(2);
-		job.setPartitionerClass(LetterCasePartitioner.class);
+	
 		
 		FileInputFormat.addInputPath(job, new Path(args[0]));
 		FileOutputFormat.setOutputPath(job, new Path(args[1]));
