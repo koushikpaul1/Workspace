@@ -6,7 +6,10 @@ import java.io.IOException;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
-
+/**
+ * @Written by Koushik Paul.
+ * 4/10/2016
+ */
 public class Map extends Mapper<LongWritable, Text, Text, Average> {
 
 	Text name = new Text();

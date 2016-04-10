@@ -4,7 +4,10 @@ import java.io.IOException;
 
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Reducer;
-
+/**
+ * @Written by Koushik Paul.
+ * 4/10/2016
+ */
 public class Combine extends Reducer<Text, Average, Text, Average>{
 	
 	protected void reduce(Text name, Iterable<Average> val, Context context)throws IOException, InterruptedException {

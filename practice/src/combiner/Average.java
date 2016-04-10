@@ -6,7 +6,10 @@ import java.io.IOException;
 
 import org.apache.hadoop.io.Writable;
 import org.apache.hadoop.io.WritableUtils;
-
+/**
+ * @Written by Koushik Paul.
+ * 4/10/2016
+ */
 public class Average implements Writable {
 	
 	long number;
