@@ -8,6 +8,8 @@ import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
+import customValueSort.KeyComparator;
+
 public class WordCount {
     public static void main(String[] args) throws Exception { 
     	
@@ -19,7 +21,10 @@ public class WordCount {
 		Job job = new Job(conf, "word count");
 		job.setJarByClass(WordCount.class);
 		job.setMapperClass(WordCountMapper.class);
-		job.setCombinerClass(WordCountReducer.class);
+		//job.setCombinerClass(WordCountReducer.class);
+		
+		job.setSortComparatorClass(InverseKeyComparator.class);
+		
 		job.setReducerClass(WordCountReducer.class);
 		job.setOutputKeyClass(Text.class);
 		job.setOutputValueClass(IntWritable.class);

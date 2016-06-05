@@ -16,8 +16,7 @@ public class LetterCasePartitioner extends Partitioner<Text, IntWritable> {
 				return 1;
 			}
 		} else {
-			System.err
-					.println("WordCountParitioner can only handle either 1 or 2 paritions");
+			System.err.println("WordCountParitioner can only handle either 1 or 2 paritions");
 			return 1;
 		}
 	}
