@@ -1,3 +1,4 @@
+package io;
 import java.io.Console;
 public class NewConsole {
 public static void main(String[] args) {

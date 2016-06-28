@@ -1,3 +1,4 @@
+package io;
 import java.util.Scanner;
 class ScanNext {
 public static void main(String [] args) {

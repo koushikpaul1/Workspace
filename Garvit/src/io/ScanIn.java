@@ -1,3 +1,4 @@
+package io;
 import java.util.*;
 class ScanIn {
 public static void main(String[] args) {
